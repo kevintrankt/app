@@ -20,7 +20,6 @@
             loginElem.addEventListener('click', function () {
 
                 var identity = document.querySelector('#identity').value;
-                heap.identify(identity);
 
 
                 if (document.querySelector('iframe'))
@@ -31,6 +30,9 @@
                 iframe.src = "https://kevin.rip/marketing/id/?id=" + identity;
                 iframe.name = "frame"
                 document.body.appendChild(iframe);
+
+                heap.identify(identity);
+
             })
 
         })
