@@ -31,7 +31,12 @@
                 iframe.name = "frame"
                 document.body.appendChild(iframe);
 
-                heap.identify(identity);
+
+                setTimeout(function () {
+                    heap.identify(identity);
+
+                }, 1000)
+
 
             })
 
